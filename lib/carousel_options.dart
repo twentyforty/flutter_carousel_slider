@@ -124,6 +124,8 @@ class CarouselOptions {
   /// Exposed clipBehavior of PageView
   final Clip clipBehavior;
 
+  final DragStartBehavior dragStartBehavior;
+
   CarouselOptions({
     this.height,
     this.aspectRatio: 16 / 9,
@@ -149,6 +151,7 @@ class CarouselOptions {
     this.disableCenter: false,
     this.padEnds = true,
     this.clipBehavior: Clip.hardEdge,
+    this.dragStartBehavior = DragStartBehavior.start,
   });
 
   ///Generate new [CarouselOptions] based on old ones.
@@ -177,7 +180,8 @@ class CarouselOptions {
           CenterPageEnlargeStrategy? enlargeStrategy,
           bool? disableCenter,
           Clip? clipBehavior,
-          bool? padEnds}) =>
+          bool? padEnds,
+          DragStartBehavior? dragStartBehavior}) =>
       CarouselOptions(
         height: height ?? this.height,
         aspectRatio: aspectRatio ?? this.aspectRatio,
@@ -206,5 +210,6 @@ class CarouselOptions {
         disableCenter: disableCenter ?? this.disableCenter,
         clipBehavior: clipBehavior ?? this.clipBehavior,
         padEnds: padEnds ?? this.padEnds,
+        dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
       );
 }

@@ -278,6 +278,7 @@ class CarouselSliderState extends State<CarouselSlider>
       controller: carouselState!.pageController,
       reverse: widget.options.reverse,
       itemCount: widget.options.enableInfiniteScroll ? null : widget.itemCount,
+      dragStartBehavior: widget.options.dragStartBehavior,
       key: widget.options.pageViewKey,
       onPageChanged: (int index) {
         int currentPage = getRealIndex(index + carouselState!.initialPage,
