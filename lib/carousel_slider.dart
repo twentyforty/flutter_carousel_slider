@@ -13,7 +13,7 @@ import 'utils.dart';
 export 'carousel_controller.dart';
 export 'carousel_options.dart';
 
-typedef Widget ExtendedIndexedWidgetBuilder(
+typedef ExtendedIndexedWidgetBuilder = Widget Function(
     BuildContext context, int index, int realIndex);
 
 class CarouselSlider extends StatefulWidget {
